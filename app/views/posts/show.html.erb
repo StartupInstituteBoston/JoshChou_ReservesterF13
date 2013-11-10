@@ -1,0 +1,48 @@
+
+<p>
+<img>
+  <%= image_tag @post.avatar_url(:thumb).to_s %>
+  </img>
+</p>
+ 
+<p>
+  <strong>Name:</strong>
+  <%= @post.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+<p>
+  <strong>Street:</strong>
+  <%= @post.street %>
+</p>
+ 
+<p>
+  <strong>City:</strong>
+  <%= @post.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @post.state %>
+</p>
+<p>
+  <strong>Zip:</strong>
+  <%= @post.zip %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @post.phone %>
+</p>
+
+<p>
+<img>
+  <%= image_tag @post.avatar_url(:thumb).to_s %>
+  </img>
+</p>
+
+<%= link_to 'Back', posts_path %>
+ <%= link_to 'Edit', edit_post_path(@post) %>
