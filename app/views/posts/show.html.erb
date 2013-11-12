@@ -1,9 +1,10 @@
 
 <p>
-<img>
-  <%= image_tag @post.avatar_url(:thumb).to_s %>
-  </img>
+
+  <%= image_tag @post.avatar_url(:masthead).to_s %>
+
 </p>
+ 
  
 <p>
   <strong>Name:</strong>
@@ -38,11 +39,7 @@
   <%= @post.phone %>
 </p>
 
-<p>
-<img>
-  <%= image_tag @post.avatar_url(:thumb).to_s %>
-  </img>
-</p>
+
 
 <%= link_to 'Back', posts_path %>
  <%= link_to 'Edit', edit_post_path(@post) %>

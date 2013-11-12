@@ -6,6 +6,13 @@ gem 'rails', '4.0.0'
 # Use postgres as the database for Active Record
 gem 'pg'
 
+#fog
+gem "fog"
+
+#unf for fog
+gem 'unf' 
+
+
 #Dontev
 gem 'dotenv-rails', :groups => [:development, :test]
 

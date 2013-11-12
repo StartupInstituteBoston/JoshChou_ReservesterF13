@@ -4,7 +4,7 @@ def new
 end	
 
 	def create
-  @post = Post.new(params[:post].permit(:name, :description, :street, :city, :state, :zip, :phone))
+  @post = Post.new(post_params)
  
   if @post.save
     redirect_to @post
@@ -25,7 +25,7 @@ end
 def update
   @post = Post.find(params[:id])
  
-  if @post.update(params[:post].permit(:name, :description, :street, :city, :state, :zip, :phone))
+  if @post.update(post_params)
     redirect_to @post
   else
     render 'edit'
@@ -45,7 +45,7 @@ def destroy
 end
 	private
 	def post_params
-		params.require(:post).permit(:name, :description, :street, :city, :state, :zip, :phone, :avatar)
+		params.require(:post).permit(:name, :description, :street, :city, :state, :zip, :phone, :avatar, :avatar_url, :menu, :menu_url)
 	end
 
 
