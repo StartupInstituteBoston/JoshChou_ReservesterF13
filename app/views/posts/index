@@ -1,6 +1,9 @@
 <h1>Listing posts</h1>
  <%= link_to 'New post', new_post_path %>
 <table>
+<p>
+<%= link_to "Sign out", destroy_owner_session_path, :method => :delete %>
+</p>
   <tr>
     <th>Name</th>
     <th>Descripttion</th>

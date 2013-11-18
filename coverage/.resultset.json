@@ -1,0 +1,26 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/joshthedudeoflife/reservester/app/controllers/restaurants_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/joshthedudeoflife/reservester/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/joshthedudeoflife/reservester/app/models/restaurant.rb": [
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1384542981
+  }
+}

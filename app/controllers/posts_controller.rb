@@ -14,16 +14,17 @@ end
 end
 
 	def show
-  	@post = Post.find(params[:id])
+
+  	@post = Post.find_by(id:params[:id])
 	end
 #this defienes the edit action
 	def edit
-  @post = Post.find(params[:id])
+  @post = Post.find_by(id:params[:id])
 end
 
 #defines the update action
 def update
-  @post = Post.find(params[:id])
+  @post = Post.find_by(id:params[:id])
  
   if @post.update(post_params)
     redirect_to @post
@@ -33,7 +34,7 @@ def update
 end
 
 def destroy
-	@post= Post.find(params[:id])
+	@post= Post.find_by(id:params[:id])
     @post.destroy 
     redirect_to @post
   end 

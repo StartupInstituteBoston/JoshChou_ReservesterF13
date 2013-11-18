@@ -1,4 +1,9 @@
 
+
+<p>
+<%= link_to "Sign out", destroy_owner_session_path, :method => :delete %>
+</p>
+
 <p>
 
   <%= image_tag @post.avatar_url(:masthead).to_s %>

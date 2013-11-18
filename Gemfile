@@ -12,6 +12,8 @@ gem "fog"
 #unf for fog
 gem 'unf' 
 
+#devise
+gem 'devise'
 
 #Dontev
 gem 'dotenv-rails', :groups => [:development, :test]
@@ -61,6 +63,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem "factory_girl_rails"
   gem "database_cleaner"
+  gem 'rspec'
+  gem 'simplecov'
 end
 
 # Use ActiveModel has_secure_password
