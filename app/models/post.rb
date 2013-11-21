@@ -3,4 +3,6 @@ class Post < ActiveRecord::Base
                     length: { minimum: 5 }
     mount_uploader :avatar, AvatarUploader
     mount_uploader :menu, MenuUploader
+
+    belongs_to :owner
 end

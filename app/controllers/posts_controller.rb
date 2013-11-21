@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+
+
+  before_filter :authenticate_owner!, :only => [:new, :create]
+  before_filter :correct_owner!, :only => [:edit, :update, :destroy]
+
 def new
 	@post = Post.new
 end	
@@ -46,9 +51,21 @@ def destroy
 end
 	private
 	def post_params
-		params.require(:post).permit(:name, :description, :street, :city, :state, :zip, :phone, :avatar, :avatar_url, :menu, :menu_url)
+		params.require(:post).permit(:name, :description, :street, :city, :state, :zip, :phone, :avatar, :avatar_url, :menu, :menu_url, :owner_id)
 	end
-
+ def correct_owner!
+      @restaurant = Restaurant.find(params[:id])
+     #  @present_owner = @owner_id
+     #  @restaurant = current_owner.restaurants.find_by(id: params[:id])
+     # byebug
+      
+      
+      if @restaurant.owner_id != current_owner.id
+#        byebug
+        redirect_to restaurants_path, alert: "Gordon Ramsey says f-- out!" 
+      end
+# => byebug
+    end
 
 	
 end
